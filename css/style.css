@@ -1,0 +1,293 @@
+html, body, header, #intro {
+	height: 100%;
+}
+
+#intro{
+	background: url(../img/IMG_0238.jpg) no-repeat center center fixed ;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.top-nav-collapse {
+	background-color: rgba(34,35,64,0.8);
+}
+@media (max-width: 768px) {
+	.navbar:not(.top-nav-collapse){
+		background: rgba(34,35,64,0.8);
+	}
+}
+section#examlpes .view.overlay.zoom.hoverable .item{
+	background-size:cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	max-width:350px;
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	transition: .5s ease;
+}
+section#examlpes .view.overlay.zoom.hoverable:hover .item{
+	transform: scale(1.1);
+}
+section#gallery .carousel-inner .carousel-item > div{
+	background-size:cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 500px;
+	max-width: 550px;
+	width: 100%;
+}
+/*LOGO*/
+header .navbar .navbar-brand{
+	position: relative;
+}
+header .navbar .navbar-brand:before{
+ content:'';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 0;
+ height: 2px;
+ transition:.5s ease;
+ background-color: #fff;
+}
+header .navbar .navbar-brand:after{
+ content:'';
+ transition:.5s ease;
+ position: absolute;
+ bottom: 0;
+ right: 0;
+ width: 0;
+ height:2px;
+ background-color: #fff;
+}
+header .navbar .navbar-brand:hover:before,
+header .navbar .navbar-brand:hover:after{
+	width: 100%;
+}
+
+/*CONTACT US*/
+section .contact_us{
+
+}
+section .contact_us h2{
+	text-align: center;
+	font-weight: 700;
+	margin-bottom: 40px;
+	text-transform: uppercase;
+}
+section .contact_us > .wrapp{
+	display: flex;
+	justify-content: space-between;
+}
+section .contact_us  > .wrapp .left{
+	max-width:35%;
+	width: 100%;
+	margin-right: 20px;
+}
+section .contact_us >  .wrapp .left form{
+	display: flex;
+	flex-direction: column;
+}
+section .contact_us >  .wrapp .left form label{
+	display: flex;
+	align-items: baseline;
+}
+section .contact_us >  .wrapp .left form label i{
+	font-size: 20px;
+	margin-right: 10px;
+	color: #a6a6a6;
+}
+section .contact_us  > .wrapp .left form input{
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid #ccc;
+	margin-bottom: 15px;
+	outline: none;
+	padding-left: 5px;
+}
+section .contact_us  > .wrapp .left form input:hover,
+section .contact_us >  .wrapp .left textarea:hover{
+	border-color: #0E0D15;
+}
+section .contact_us  > .wrapp .left form label:hover i,
+section .contact_us >  .wrapp .left label:hover i{
+	color: #0E0D15;
+}
+section .contact_us >  .wrapp .left textarea{
+	width: 100%;
+	height: 100px;
+	border: none;
+	border-bottom: 2px solid #ccc;
+	outline: none;
+}
+section .contact_us >  .wrapp .left form input[type*='submit']{
+	padding: 10px 46px 10px 30px;
+	text-transform: uppercase;
+	background-color: #0E0D15;
+	color: #fff;
+	display: block;
+	margin:0 auto;
+	border:2px solid #0E0D15;
+	cursor: pointer;
+	transition:.3s ease;
+}
+section .contact_us >  .wrapp .left form input[type*='submit']:hover{
+	background-color: #fff;
+	color: #0E0D15;
+}
+section .contact_us >  .wrapp .left form  .submit:hover:before{
+	color: #0E0D15;
+}
+section .contact_us >  .wrapp .left form  .submit{
+	align-self: center;
+	position: relative;
+	margin-top: 20px;
+}
+section .contact_us >  .wrapp .left form  .submit:before{
+	content: '\f1d8';
+	position: absolute;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 700;
+	top: 45%;
+	transform: translateY(-50%);
+	right: 23px;
+	color: #fff;
+	cursor: pointer;
+	transition:.3s ease;
+}
+section .contact_us  > .wrapp .right{
+	max-width:55%;
+	width: 100%;
+}
+section .contact_us  > .wrapp .right .location{
+	padding-bottom: 60%;
+	display: block;
+	position: relative;
+}
+section .contact_us  > .wrapp .right iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+section .contact_us  > .wrapp .right .wrapp{
+	display: flex;
+	justify-content: space-between;
+	font-weight: 700;
+}
+section .contact_us  > .wrapp.timetable .right .wrapp{
+	margin-bottom: 20px;
+	color: #999;
+}
+section .contact_us  > .wrapp.timetable .right .wrapp a{
+	color: #000;
+	transition: .3s ease;
+	color: #999;
+}
+section .contact_us  > .wrapp.timetable .right .wrapp a:hover{
+	color: #ccc;
+}
+footer .get_contact{
+	margin-top: 50px;
+	padding: 20px 0;
+	background-color: #0E0D15;
+}
+footer .get_contact .wrapp{
+	display: flex;
+	justify-content: space-around;
+}
+footer .get_contact .wrapp .text{
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 600;
+	margin:0;
+}
+footer .get_contact .wrapp ul{
+	list-style: none;
+	display: flex;
+	margin:0;
+	padding:0;
+}
+footer .get_contact .wrapp ul li{
+	margin:0 10px;
+}
+footer .get_contact .wrapp ul li a{
+	color: #fff;
+	transition:.3s ease;
+	font-size: 18px;
+	padding:5px;
+}
+footer .get_contact .wrapp ul li a:hover{
+	color: #000;
+}
+/* deep */
+footer .deep{
+	background-color: #090505;
+}
+footer .deep .wrapp{
+	padding:10px 0;
+	display: flex;
+	justify-content: space-around;
+	align-items:center;
+	color: #fff;
+}
+footer .deep .wrapp .line{
+	height: 2px;
+	width: 100%;
+	background-color: #fff;
+	margin:4px;
+}
+footer .deep .wrapp .left{
+	max-width:300px;
+}
+footer .deep .wrapp .left h3{
+	text-align: center;
+}
+footer .deep .wrapp .left .text{
+	text-align: center;
+}
+footer .deep .wrapp span,
+footer .deep .wrapp a{
+	margin: 5px 0;
+	color: #fff;
+}
+footer .deep .wrapp a:hover{
+	color: #339cff;
+}
+footer .deep .wrapp .right{
+	display: flex;
+	flex-direction: column;
+}
+@media screen and (max-width: 800px){
+ section .contact_us > .wrapp{
+ 	flex-direction: column;
+ 	align-items:center;
+ }
+ section .contact_us > .wrapp .right,
+ section .contact_us > .wrapp .left{
+	max-width:600px;
+ }
+ section .contact_us > .wrapp.timetable .right .wrapp{
+ 	align-items:center;
+ 	flex-direction: column;
+ }
+}
+@media screen and (max-width: 500px){
+ section#gallery .carousel-inner .carousel-item > div{
+	height: 300px;
+ }
+ footer .get_contact .wrapp{
+ 	flex-direction: column;
+ 	align-items: center;
+ }
+ footer .deep .wrapp{
+ 	flex-direction: column;
+ 	align-items:center;
+ }
+ footer .deep .wrapp .right{
+ 	margin-top: 20px;
+ }
+}
