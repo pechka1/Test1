@@ -13,7 +13,14 @@ for (let anchor of anchors) {
   })
 }
 
-// // MDB Lightbox Init
-// $(function () {
-// $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
-// });
+$('section .gallery_block .wrmain .item a').fancybox({
+  thumbs: {
+    autoStart: true, // Display thumbnails on opening
+    hideOnClose: true, // Hide thumbnail grid when closing animation starts
+    parentEl: ".fancybox-container", // Container is injected into this element
+    axis: "y" // Vertical (y) or horizontal (x) scrolling
+  }
+
+});
+
+

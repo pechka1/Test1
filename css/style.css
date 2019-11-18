@@ -1,7 +1,10 @@
-html, body, header, #intro {
+/*html, body, header, #intro {
 	height: 100%;
-}
+}*/
+header, #intro{
 
+	height: 100vh;
+}
 #intro{
 	background: url(../img/IMG_0238.jpg) no-repeat center center fixed ;
 	-webkit-background-size: cover;
@@ -65,11 +68,60 @@ header .navbar .navbar-brand:hover:before,
 header .navbar .navbar-brand:hover:after{
 	width: 100%;
 }
-
-/*CONTACT US*/
-section .contact_us{
-
+/*GALLERY BLOCK*/
+section .gallery_block .wrapp{
+  flex-wrap: wrap;
+	justify-content: space-evenly;
+	display: flex;
+	margin-bottom: 100px;
 }
+section .gallery_block .wrapp .item{
+	max-width:330px;
+	width:100%;
+	height: 380px;
+	margin:10px;
+}
+section .gallery_block .wrapp .item a{
+	display: none;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:center;
+	width:100%;
+	height:100%;
+}
+section .gallery_block .wrapp .item a:first-child .mask{
+	position: absolute;
+	top: -100%;
+	left: 0;
+	width:100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.4);
+	z-index: 1;
+	transition: top .3s ease;
+}
+section .gallery_block .wrapp .item a:first-child .mask:before{
+	content:'\f00e';
+  font-family: "Font Awesome 5 Free";
+	position: absolute;
+	font-weight: 700;
+	font-size: 45px;
+	color: #fff;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+section .gallery_block .wrapp .item a:first-child{
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+section .gallery_block .wrapp .item a:first-child:hover .mask{
+	top: 0;
+}
+section .gallery_block .wrapp .item a:first-child img{
+	display: none;
+}
+/*CONTACT US*/
 section .contact_us h2{
 	text-align: center;
 	font-weight: 700;
@@ -261,7 +313,17 @@ footer .deep .wrapp .right{
 	display: flex;
 	flex-direction: column;
 }
+@media screen and (max-width: 1000px){
+	section .gallery_block .wrapp .item{
+		max-width:280px;
+		height:320px;
+	}
+}
 @media screen and (max-width: 800px){
+	section .gallery_block .wrapp .item{
+	max-width:220px;
+	height:300px;
+	}
  section .contact_us > .wrapp{
  	flex-direction: column;
  	align-items:center;
@@ -276,6 +338,10 @@ footer .deep .wrapp .right{
  }
 }
 @media screen and (max-width: 500px){
+ section .gallery_block .wrapp .item{
+  max-width:100%;
+  height:280px;
+ }
  section#gallery .carousel-inner .carousel-item > div{
 	height: 300px;
  }
