@@ -1,3 +1,4 @@
+
 const anchors = document.querySelectorAll('header .nav-item > a')
 
 for (let anchor of anchors) {

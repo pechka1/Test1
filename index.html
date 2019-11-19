@@ -338,13 +338,13 @@
         </div>
       <div class="wrapp">
         <div class="left">
-          <form method="POST" action="/submit">
+          <form>
             <label><i class="fas fa-user"></i><input name="name" type="text" placeholder="Ваше ім'я"></label>
             <label><i class="fas fa-envelope"></i><input name="email" type="email" placeholder="Ваш email"></label>
             <label><i class="fas fa-phone-square-alt"></i><input name="phone" type="phone" placeholder="Ваш номер телефону"></label>
             <label><i class="fas fa-tag"></i><input name="subject" type="text" placeholder="Тема"></label>
             <label ><i class="fas fa-pencil-alt"></i><textarea name="messagetext" placeholder="Ваше повідомлення"></textarea></label>
-            <label class="submit"><input type="submit" value="Відправити"></label>
+            <label class="submit"><input id="FormToSend" type="submit" value="Відправити"></label>
           </form>
         </div>
         <div class="right">
@@ -388,5 +388,6 @@
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
   <script src='js/main.js'></script>
+  <script src="app.js"></script>
 </body>
 </html>

@@ -16,15 +16,18 @@ main.use(express.urlencoded({ extended: true }));
 main.set('view engine', 'html');
 main.use(express.static(__dirname + '/'));
 
-main.get('/submit', function (req, res) {
-    res.sendFile('index.html', {root : __dirname });
-  });
+// main.get('/', function (req, res) {
+//     res.sendFile('index.html', {root : __dirname });
+//   });
+
 
 main.post('/submit', (req, res) => {
     console.log('req.body', req.body);
-    bot.sendMessage(chatId, `Name: ${req.body.name}\nEmail: ${req.body.email}\nPhone: ${req.body.phone}\nSubject:${req.body.subject}\nMessage: ${req.body.messagetext}`);
-    res.end()
-     // $("#result").load("result.php");
+    let contactForm = `Name: ${req.body.name}\nEmail: ${req.body.email}\nPhone: ${req.body.phone}\nSubject:${req.body.subject}\nMessage: ${req.body.messagetext}`
+    bot.sendMessage(chatId,contactForm,{callback});
+    res.status(200).end();
+    // if (res.status == 200){success}
+    //   else {error}
 
   });
 
