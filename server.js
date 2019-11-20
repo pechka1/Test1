@@ -24,12 +24,52 @@ main.use(express.static(__dirname + '/'));
 main.post('/submit', (req, res) => {
     console.log('req.body', req.body);
     let contactForm = `Name: ${req.body.name}\nEmail: ${req.body.email}\nPhone: ${req.body.phone}\nSubject:${req.body.subject}\nMessage: ${req.body.messagetext}`
-    bot.sendMessage(chatId,contactForm,{callback});
+    bot.sendMessage(chatId,contactForm);
     res.status(200).end();
+    console.log (res);
+    // res.status(200).end();
     // if (res.status == 200){success}
     //   else {error}
 
   });
+
+// bot.on('message', function(message)
+// {
+// 	// Received text message
+//     console.log(message);
+// });
+
+// bot.on('inline.query', function(message)
+// {
+// 	// Received inline query
+//     console.log(message);
+// });
+
+// bot.on('inline.result', function(message)
+// {
+// 	// Received chosen inline result
+//     console.log(message);
+// });
+
+// bot.on('inline.callback.query', function(message)
+// {
+// 	// New incoming callback query
+//     console.log(message);
+// });
+
+// bot.on('edited.message', function(message)
+// {
+// 	// Message that was edited
+//     console.log(message);
+// });
+
+// bot.on('update', function(message)
+// {
+// 	// Generic update object
+// 	// Subscribe on it in case if you want to handle all possible
+// 	// event types in one callback
+//     console.log(message);
+// });
 
 
 
@@ -37,7 +77,7 @@ main.listen(3000,() =>console.log('Server started...'));
 
 
 ////////////////////////////////////////////////////////////////////////////////////
-// const TelegramBot = require('node-telegram-bot-api');
+// const TelegramBot = require('node-telegram-bot-bot');
 
 // // replace the value below with the Telegram token you receive from @BotFather
 // const token = '1026049763:AAFam08Rt90CXtDGcwM2FLJI_m49PR-nlfY';

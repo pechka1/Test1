@@ -19,7 +19,7 @@ $(formdata).each(function(index, obj){
       	alert('Submit success')
       },
       error: function (data) {
-        console.log('An error occurred.')
+        alert('An error occurred.')
     }
 
   }); 
