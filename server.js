@@ -24,14 +24,31 @@ main.use(express.static(__dirname + '/'));
 main.post('/submit', (req, res) => {
     console.log('req.body', req.body);
     let contactForm = `Name: ${req.body.name}\nEmail: ${req.body.email}\nPhone: ${req.body.phone}\nSubject:${req.body.subject}\nMessage: ${req.body.messagetext}`
-    bot.sendMessage(chatId,contactForm);
-    res.status(200).end();
-    console.log (res);
+    bot.sendMessage(chatId,contactForm)
+    .then(res => {
+    	if (!res){
+    		return res.status(204).end();
+    	}
+    	return res.status(200).end();
+    	// else {
+    	// 	return reply().code(500);
+    	// };
+    });
+
+    }); 
+    // .then(res => {console.log(res)})
+    // .catch(error => {
+    //       console.log(error)
+    //     });
+    // let promis = bot.sendMessage(chatId,contactForm);
+    // console.log (promis);
+    //res.status(200).end();
+    //console.log (res);
     // res.status(200).end();
     // if (res.status == 200){success}
     //   else {error}
 
-  });
+  // });
 
 // bot.on('message', function(message)
 // {
