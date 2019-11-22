@@ -70,16 +70,69 @@ header .navbar .navbar-brand:hover:after{
 }
 /*GALLERY BLOCK*/
 section .gallery_block .wrapp{
-  flex-wrap: wrap;
 	justify-content: space-evenly;
-	display: flex;
 	margin-bottom: 100px;
+	position: relative;
+}
+section .gallery_block .wrapp .back{
+	padding-bottom: 100%;
 }
 section .gallery_block .wrapp .item{
-	max-width:330px;
-	width:100%;
-	height: 380px;
-	margin:10px;
+	position: absolute;
+}
+section .gallery_block .wrapp .item.item_1{
+	left: 1%;
+	top: 1%;
+	right: 67%;
+	bottom: 67%;
+}
+section .gallery_block .wrapp .item.item_2{
+	top: 1%;
+	left: 34%;
+	right:34%;
+	bottom: 67%;
+}
+section .gallery_block .wrapp .item.item_3{
+	top: 1%;
+	left: 67%;
+	right:1%;
+	bottom: 67%;
+}
+section .gallery_block .wrapp .item.item_4{
+	top: 34%;
+	left: 1%;
+	right:67%;
+	bottom: 34%;
+}
+section .gallery_block .wrapp .item.item_5{
+	top: 34%;
+	left: 34%;
+	right:34%;
+	bottom: 34%;
+}
+section .gallery_block .wrapp .item.item_6{
+	top: 34%;
+	left: 67%;
+	right:1%;
+	bottom: 34%;
+}
+section .gallery_block .wrapp .item.item_7{
+	top: 67%;
+	left: 1%;
+	right:67%;
+	bottom: 1%;
+}
+section .gallery_block .wrapp .item.item_8{
+	top: 67%;
+	left: 34%;
+	right:34%;
+	bottom: 1%;
+}
+section .gallery_block .wrapp .item.item_9{
+	top: 67%;
+	left: 67%;
+	right:1%;
+	bottom: 1%;
 }
 section .gallery_block .wrapp .item a{
 	display: none;
@@ -101,7 +154,7 @@ section .gallery_block .wrapp .item a:first-child .mask{
 }
 section .gallery_block .wrapp .item a:first-child .mask:before{
 	content:'\f00e';
-  font-family: "Font Awesome 5 Free";
+    font-family: "Font Awesome 5 Free";
 	position: absolute;
 	font-weight: 700;
 	font-size: 45px;
@@ -314,16 +367,17 @@ footer .deep .wrapp .right{
 	flex-direction: column;
 }
 @media screen and (max-width: 1000px){
-	section .gallery_block .wrapp .item{
-		max-width:280px;
-		height:320px;
+/*	section .med_helper{
+		justify-content: space-evenly;
+		flex-direction: column;
+	}*/
+}
+@media screen and (max-width: 991px){
+	header .social li{
+		margin:0 5px;
 	}
 }
 @media screen and (max-width: 800px){
-	section .gallery_block .wrapp .item{
-	max-width:220px;
-	height:300px;
-	}
  section .contact_us > .wrapp{
  	flex-direction: column;
  	align-items:center;
@@ -337,11 +391,66 @@ footer .deep .wrapp .right{
  	flex-direction: column;
  }
 }
+@media screen and (max-width: 600px){
+section .gallery_block .wrapp .back{
+	padding-bottom: 700px;
+}
+	section .gallery_block .wrapp .item.item_1{
+	left: .5%;
+	top: .5%;
+	right: 50.5%;
+	bottom: 79%;
+}
+section .gallery_block .wrapp .item.item_2{
+	top: .5%;
+	right:.5%;
+	left: 50.5%;
+	bottom: 79%;
+}
+section .gallery_block .wrapp .item.item_3{
+	left: .5%;
+	top: 21.5%;
+	right: 50.5%;
+	bottom: 59.5%;
+}
+section .gallery_block .wrapp .item.item_4{
+	top: 21.5%;
+	left: 50.5%;
+	right:.5%;
+	bottom: 59.5%;
+}
+section .gallery_block .wrapp .item.item_5{
+	left: .5%;
+	top: 41%;
+	right: 50.5%;
+	bottom: 40%;
+}
+section .gallery_block .wrapp .item.item_6{
+	top: 41%;
+	left: 50.5%;
+	right:.5%;
+	bottom: 40%;
+}
+section .gallery_block .wrapp .item.item_7{
+	left: .5%;
+	top: 60.5%;
+	right: 50.5%;
+	bottom: 20.5%;
+}
+section .gallery_block .wrapp .item.item_8{
+	top: 60.5%;
+	left: 50.5%;
+	right:.5%;
+	bottom: 20.5%;
+}
+section .gallery_block .wrapp .item.item_9{
+	left: .5%;
+	top: 80%;
+	right: .5%;
+	bottom: .5%;
+}
+}
 @media screen and (max-width: 500px){
- section .gallery_block .wrapp .item{
-  max-width:100%;
-  height:280px;
- }
  section#gallery .carousel-inner .carousel-item > div{
 	height: 300px;
  }
